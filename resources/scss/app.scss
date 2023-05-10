@@ -1,1 +1,249 @@
+@use "./variables";
+
 @import '~bootstrap/scss/bootstrap';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.primary-text-color{
+color: variables.$primary-color;
+}
+
+.secondary-text-color{
+color: variables.$secondary-color;
+}
+
+.terthiary-text-color{
+color: variables.$terthiary-color;
+}
+
+.container{
+margin: 0 auto;
+max-width: 1170px;
+}
+
+.d-flex{
+display: flex;
+}
+
+.flex-wrap{
+flex-wrap: wrap;
+}
+
+.justify-content-between{
+justify-content: space-between;
+}
+
+.justify-content-around{
+justify-content: space-around;
+}
+
+.align-center{
+align-items: center;
+}
+
+.h-100{
+height: 100%;
+}
+
+.list-style-none{
+list-style: none;
+}
+
+.text-decoration-none{
+text-decoration: none;
+}
+.text-no-wrap{
+    white-space: nowrap;
+}
+
+.d-block{
+display: block;
+}
+
+.d-inline-block{
+display: inline-block;
+}
+
+.p-3{
+padding: 1rem;
+}
+
+.pt-4{
+padding-top: 1.5rem;
+}
+
+.pb-3{
+padding-bottom: 1rem;
+}
+
+.ptb-05{
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+
+.pes-5{
+padding-left: 3rem;
+padding-right: 3rem;
+}
+
+.m-auto{
+margin: auto;
+}
+
+.ms-3{
+margin-left: 1rem;
+}
+
+.mb-2{
+margin-bottom: 0.5rem;
+}
+
+.mes-3{
+margin-left: 1rem;
+margin-right: 1rem;
+}
+
+.m-2{
+margin: 0.5rem
+}
+
+.m-3{
+margin: 1rem;
+}
+
+.me-3{
+margin-right: 1rem;
+}
+
+main{
+background-color: variables.$fourthiary-color;
+}
+
+.text-white{
+color: variables.$text-white;
+}
+
+.fs-075{
+font-size: 0.75rem;
+}
+
+.fs-125{
+font-size: 1.25rem;
+}
+
+.fw-bold{
+font-weight: bold;
+}
+
+.bg-tag{
+background-color: variables.$secondary-color; 
+border: none;
+}
+
+// HEADER
+
+header{
+    height: 7.5rem;
+}
+
+#logo{
+    height: 5rem;
+}
+
+.navLinkContainer{
+    line-height: 7.5rem;
+    height: 100%;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    &:hover:not(.selected-link){
+        border-bottom: 5px solid lighten(variables.$secondary-color, 30); 
+    }
+}
+
+.selected-link{
+    border-bottom: 5px solid variables.$secondary-color;
+
+    & a{
+        color: variables.$secondary-color;
+    }
+}
+
+// FOOTER
+
+#footer-top{
+    height: 20rem;
+    background-image: url(../img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparent-logo{
+    background-image: url(../img/dc-logo-bg.png);
+    background-position: center;
+    width: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#footer-links-container{
+    padding: 1rem 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.links-head{
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.links-list {
+    margin-right: 1.5rem;
+
+    & a:hover{
+        transition: 0.25s;
+        color: lighten(variables.$terthiary-color, 50);
+    }
+}
+
+#footer-bottom{
+    height: 7.5rem;
+    background-color: variables.$footer-bottom-bg;
+
+    & a:hover img{
+        transition: scale 0.25s;
+        scale: 1.1;
+    }
+
+    & a:active img{
+        transition: scale 0.25s;
+        scale: 1;
+    }
+}
+
+#signUpBtn{
+    padding: 1rem;
+    border: 2px solid variables.$secondary-color;
+    background-color: variables.$footer-bottom-bg;
+    &:hover{
+        cursor: pointer;
+        transition: background-color 0.25s;
+        transition: scale 0.25s;
+        background-color: lighten(variables.$footer-bottom-bg, 1);
+        scale: 1.01;
+    }
+
+    &:active{
+        transition: background-color 0.25s;
+        transition: scale 0.25s;
+        background-color: darken(variables.$footer-bottom-bg, 1);
+        scale: 0.99;
+    }
+}
