@@ -33,7 +33,7 @@
                         {{ strtoupper($link['text']) }}
                     </a>
                 </li>
-            endforeach
+            @endforeach
         </ul>
     </div>
 </div>
