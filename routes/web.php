@@ -18,8 +18,9 @@ Route::get('/', function () {
     $navLinks = config('db.nav_links');
     $footerLinks = config('db.foot_links');
     $footerBottomLinks = config('db.foot_bottom_links');
+    $comics = config('db.comics');
 
-    $data = ['navLinks' => $navLinks, 'footerLinks' => $footerLinks, 'footerBottomLinks' => $footerBottomLinks];
+    $data = ['navLinks' => $navLinks, 'footerLinks' => $footerLinks, 'footerBottomLinks' => $footerBottomLinks, 'comics' => $comics];
 
     return view('home', $data);
 
