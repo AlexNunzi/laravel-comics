@@ -29,8 +29,8 @@
                     <h3 class="secondary-text-color">FOLLOW US</h3>
                 </li>
                 @foreach($footerBottomLinks as $link)
-                <li v-for="(link, i) in footerBottomLinks" class="m-2">
-                    <a :href="link.href">
+                <li class="m-2">
+                    <a href="{{ $link['href'] }}">
                         <img src="{{Vite::asset('resources/img/' . $link['icon'])}}" alt="{{ $link['text'] }}" />
                     </a>
                 </li>

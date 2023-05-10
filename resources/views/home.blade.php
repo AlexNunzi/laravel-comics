@@ -11,7 +11,7 @@
 
     <ul class="d-flex flex-wrap list-style-none">
         @foreach($comics as $comic)
-            <li class="comic-card text-white" v-for="(comic, i) in comicsList">
+            <li class="comic-card text-white">
                 <a href="#">
                     <img class="mb-2 d-block" src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
                 </a>

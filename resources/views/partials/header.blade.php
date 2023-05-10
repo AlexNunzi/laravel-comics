@@ -4,8 +4,8 @@
         <nav class="h-100">
             <ul class="list-style-none h-100 d-flex align-center">
                 @foreach($navLinks as $link)
-                    <li class="navLinkContainer mes-3" class="selectedLink == i ? 'selected-link':''">
-                        <a class="ptb-05 text-decoration-none primary-text-color" href="$link.href">{{ strtoupper($link['text']) }}</a>
+                    <li class="navLinkContainer mes-3">
+                        <a class="ptb-05 text-decoration-none primary-text-color" href="{{ $link['href'] }}">{{ strtoupper($link['text']) }}</a>
                     </li>
                 @endforeach
             </ul>
